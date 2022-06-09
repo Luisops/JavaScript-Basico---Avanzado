@@ -1,3 +1,7 @@
+// Hoisting 
+
+// Ademas de las muy notables diferencias en sintaxis, quiero mostrarte las diferencias entre ambas... si llamamos la función antes de declararla, el function expression va a funcionar bien, mientras que el otro nos va a marcar un error..
+
 //DECLARACION DE  FUNCION (function declaration)
 
 function sumar(){
@@ -6,9 +10,22 @@ function sumar(){
 
 sumar();
 
+// Eso pasa porque JavaScript se ejecuta digamos en 2 vueltas - Eso se le conoce como Hoisting , la primer vuelta registra todas las funciones y determina las variables, esta etapa se le llama de creación, 
+
+// la segunda pasada es la que executa tu codigo, se llama de ejecución.
+
+// Por lo tanto el primer código funciona porque function se registra primero y después se ejecuta el código.
+
+// el segundo no funciona porque si bien es una función no es declarada como tal, lo ve más bien como una variable...
+
+// Esto se le conoce como hosting que basicamente son esas 2 etapas (creación y ejecución)
+
+// básicamente tu código se ejecuta asi:
 //expresion de funciones (function expression)
 
 const sumar2 = function(){
-    console.log(6+6);
+    console.log(6+6);// pero como ya habiamos llamado la función, se queda como undefined
 }
-sumar2();
+sumar2(); // a estas alturas es undefined...
+
+// Y esta es pregunta para obtener un trabajo como JS Developer...

@@ -1,3 +1,4 @@
+// ForEach y Map con arrow functions...
 //Arrows function ForEach y Map
 
 const carrito = [
@@ -24,3 +25,4 @@ const producto1 = carrito.map( (producto) =>  `Nombre: ${producto.nombre} - Prec
 carrito.forEach( producto => console.log(`Nombre: ${producto.nombre} - Precio: ${producto.precio }`));
     
 console.log(producto1);
+// Los arrow functions si no se coloca el return y queda en una sola linea dan por implicito el return.. en el map
